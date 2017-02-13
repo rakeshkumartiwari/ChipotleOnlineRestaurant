@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Chipotle.ItemDetails.Item>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Menu</h2>
+<hr />
+
+@*@Html.Partial("_ItemDetails_Dahsboard", Model)*@
+@{Html.RenderAction("_ItemDetails_Dahsboard", "Home");}
+
+
+
+
