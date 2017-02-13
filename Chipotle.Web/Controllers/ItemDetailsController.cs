@@ -13,7 +13,6 @@ namespace Chipotle.Web.Controllers
         {
             IProvideItems objIProvideItem = new IProvideItems();
             var model = objIProvideItem.getAllItems();
-           // return View("_ItemDetails_Dahsboard", model);
             return View("_ItemDetails_Dahsboard", model);
         }
     }

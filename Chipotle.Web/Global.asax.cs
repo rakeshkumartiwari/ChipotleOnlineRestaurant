@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Data.Entity;
 using Chipotle.ItemDetails;
+using Chipotle.ItemPricing;
 
 namespace Chipotle.Web
 {
@@ -21,6 +22,7 @@ namespace Chipotle.Web
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<ISeedItemsPrice>(new MyItenPricingInitializer());
             Database.SetInitializer<ISeedItems>(new DropCreateDatabaseIfModelChanges());
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);

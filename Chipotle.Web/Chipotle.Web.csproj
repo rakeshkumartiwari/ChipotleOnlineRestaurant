@@ -117,6 +117,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ItemDetailsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemPriceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -128,6 +129,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\ItemPrice\_ItemPrice.cshtml" />
+    <Content Include="Views\ItemPrice\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,6 +149,10 @@
     <ProjectReference Include="..\Chipotle.ItemDetails\Chipotle.ItemDetails.csproj">
       <Project>{cb20dc0d-29af-4e28-bb84-d70732dc9b76}</Project>
       <Name>Chipotle.ItemDetails</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chipotle.ItemPricing\Chipotle.ItemPricing.csproj">
+      <Project>{a75c2b4d-5828-4339-bbbd-82325cc0f765}</Project>
+      <Name>Chipotle.ItemPricing</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
