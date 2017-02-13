@@ -16,8 +16,8 @@ namespace Chipotle.ItemPricing
     {
         protected override void Seed(ISeedItemsPrice context)
         {
-            context.ItemPrices.Add(new ItemPrice { Name = "BARRITO", Price = 250.89 });
-            context.ItemPrices.Add(new ItemPrice { Name = "BARRITO BOWl", Price = 350.59 });
+            context.ItemPrices.Add(new ItemPrice { ItemId = "1", Price = 250.89 });
+            context.ItemPrices.Add(new ItemPrice { ItemId = "2", Price = 350.59 });
             context.SaveChanges();
 
         }

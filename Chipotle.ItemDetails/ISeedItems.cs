@@ -11,8 +11,8 @@ namespace Chipotle.ItemDetails
     {
         public void Seed(ISeedItems context)
         {
-            context.Items.Add(new Item { Name = "BARRITO", Url = "~/Images/barrito.jpg" });
-            context.Items.Add(new Item { Name = "BARRITO BOWL", Url = "~/Images/barritoBowl.jpg" });
+            context.Items.Add(new Item {  ItemId="1", Name = "BARRITO", Url = "~/Images/barrito.jpg" });
+            context.Items.Add(new Item { ItemId="2", Name = "BARRITO BOWL", Url = "~/Images/barritoBowl.jpg" });
             context.SaveChanges();
         }
         public IDbSet<Item> Items { get; set; }
