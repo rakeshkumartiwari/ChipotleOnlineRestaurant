@@ -12,19 +12,12 @@ namespace Chipotle.Taxonomy.Controllers
         [HttpGet]
         public List<Item> GetAll(string itemId)
         {
-            return new List<Item>{
-            new Item{ ItemId="1", Type="Filling"},
-
-            new Item{ ItemId="2", Type="Toppings"}
-            }.Where(c => c.ItemId == itemId).ToList();
+            ISeedTaxonomy db = new ISeedTaxonomy();
+            var model = db.getAllItem().Where(c => c.ItemId == itemId).ToList();
+            
+            return model;
 
         }
     }
-    public class Item
-    {
-        public int Id { get; set; }
-        public string ItemId { get; set; }
-        public string Type { get; set; }
-
-    }
+   
 }
