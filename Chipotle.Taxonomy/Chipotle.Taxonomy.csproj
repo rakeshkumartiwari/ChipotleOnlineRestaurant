@@ -90,7 +90,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\TaxonomyDb.cs" />
-    <Compile Include="ISeedTaxonomy.cs" />
+    <Compile Include="TaxonomyDataSeeder .cs" />
     <Compile Include="Models\Definition.cs" />
     <Compile Include="Models\Fillings.cs" />
     <Compile Include="Models\IDefineIngredient.cs" />

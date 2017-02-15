@@ -12,7 +12,7 @@ using Chipotle.Taxonomy.Infrastructure;
 
 namespace Chipotle.Taxonomy.Tests
 {
-   
+
     public class DefinitionSeederTest : IClassFixture<Context>
     {
 
@@ -26,13 +26,11 @@ namespace Chipotle.Taxonomy.Tests
 
         public void ICanSeedToppings()
         {
+            var taxonomySeeder = new TaxonomyDataSeeder();
+            taxonomySeeder.SeedToppings("Toppings");
 
-            var topping = new Toppings("Toppings");
+
             var db = new TaxonomyDb();
-
-            db.Definitions.Add(topping);
-            db.SaveChanges();
-
             var savedDefinitions = db.Definitions.ToList();
             var savedTopping = savedDefinitions.Where(d => d.Name == "Toppings").First();
             Assert.NotNull(savedTopping);
@@ -45,12 +43,13 @@ namespace Chipotle.Taxonomy.Tests
 
         public void ICanSeedFillings()
         {
+            var taxonomySeeder = new TaxonomyDataSeeder();
+            taxonomySeeder.SeedFillings("Fillings");
 
-            var fillings = new Fillings("Fillings");
+            
             var db = new TaxonomyDb();
 
-            db.Definitions.Add(fillings);
-            db.SaveChanges();
+          
 
             var savedDefinitions = db.Definitions.ToList();
             var filling = savedDefinitions.Where(d => d.Name == "Fillings").First();
@@ -64,12 +63,13 @@ namespace Chipotle.Taxonomy.Tests
 
         public void ICanSeedSideDrinks()
         {
+            var taxonomySeeder = new TaxonomyDataSeeder();
+            taxonomySeeder.SeedSideDrinks("Side and Drinks");
 
-            var sideDrinks = new SideDrinks("Side and Drinks");
+           
             var db = new TaxonomyDb();
 
-            db.Definitions.Add(sideDrinks);
-            db.SaveChanges();
+     
 
             var savedSideDrinks = db.Definitions.ToList();
             var sideDrink = savedSideDrinks.Where(d => d.Name == "Side and Drinks").First();
