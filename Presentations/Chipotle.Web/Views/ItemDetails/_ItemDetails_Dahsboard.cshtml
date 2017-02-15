@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Chipotle.ItemDetails.Item>
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="flot">
+            <img src="@Url.Content(item.Url)" alt="Image" />
+            <p>@item.Name</p>
+            @*<input type="button" class="btn btn-danger btn-block" value="Order Now" onclick="location.href='@Url.Action("Index", "ItemPrice")'" />*@
+            <p>@Html.ActionLink("Order Now", "Index", "ItemPrice", new {id = item.Id },null)</p>
+        </div>
+    }
+
+</div>

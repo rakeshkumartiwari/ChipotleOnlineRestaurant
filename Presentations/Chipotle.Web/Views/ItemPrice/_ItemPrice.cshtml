@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Chipotle.Pricing.ItemPrice>
+
+
+@foreach (var item in Model)
+{
+    <p>Name:@item.Name </p>
+    <p>Price:@item.Price</p>
+    
+}
