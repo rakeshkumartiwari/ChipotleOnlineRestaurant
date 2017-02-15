@@ -27,7 +27,7 @@ namespace Chipotle.Taxonomy.Tests
         public void ICanSeedToppings()
         {
             var taxonomySeeder = new TaxonomyDataSeeder();
-            taxonomySeeder.SeedToppings("Toppings");
+            taxonomySeeder.SaveToppings("Toppings");
 
 
             var db = new TaxonomyDb();
