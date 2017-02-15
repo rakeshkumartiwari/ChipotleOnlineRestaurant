@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chipotle.ItemPricing", "Chi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chipotle.Taxonomy", "Chipotle.Taxonomy\Chipotle.Taxonomy.csproj", "{9ED2DED9-369B-4BBC-A48F-E3A0A86A53CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chipotle.Taxonomy.Tests", "Taxonomy\Chipotle.Taxonomy.Tests\Chipotle.Taxonomy.Tests.csproj", "{1EB141A0-ECD2-421E-938C-77A05BFDBFF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{9ED2DED9-369B-4BBC-A48F-E3A0A86A53CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ED2DED9-369B-4BBC-A48F-E3A0A86A53CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ED2DED9-369B-4BBC-A48F-E3A0A86A53CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EB141A0-ECD2-421E-938C-77A05BFDBFF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EB141A0-ECD2-421E-938C-77A05BFDBFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EB141A0-ECD2-421E-938C-77A05BFDBFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EB141A0-ECD2-421E-938C-77A05BFDBFF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +52,6 @@ Global
 		{CB20DC0D-29AF-4E28-BB84-D70732DC9B76} = {D4348B47-463D-4FA9-BF37-D261118AFB45}
 		{A75C2B4D-5828-4339-BBBD-82325CC0F765} = {D4348B47-463D-4FA9-BF37-D261118AFB45}
 		{9ED2DED9-369B-4BBC-A48F-E3A0A86A53CF} = {D4348B47-463D-4FA9-BF37-D261118AFB45}
+		{1EB141A0-ECD2-421E-938C-77A05BFDBFF7} = {D4348B47-463D-4FA9-BF37-D261118AFB45}
 	EndGlobalSection
 EndGlobal

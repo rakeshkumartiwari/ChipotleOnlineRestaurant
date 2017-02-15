@@ -9,15 +9,7 @@ namespace Chipotle.Taxonomy.Controllers
 {
     public class TaxonomyController : ApiController
     {
-        [HttpGet]
-        public List<Item> GetAll(string itemId)
-        {
-            ISeedTaxonomy db = new ISeedTaxonomy();
-            var model = db.getAllItem().Where(c => c.ItemId == itemId).ToList();
-            
-            return model;
-
-        }
+      
     }
    
 }
