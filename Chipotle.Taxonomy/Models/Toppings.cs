@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Chipotle.Taxonomy
+namespace Chipotle.Taxonomy.Models
 {
-    public class Toppings: IDefineIngredient 
+    public class Toppings : Definition
     {
-        public string Name { get; set; }
+       
         public Toppings(string name)
         {
             Name = name;
+        }
+
+        public Toppings()
+        {
+
         }
     }
 }

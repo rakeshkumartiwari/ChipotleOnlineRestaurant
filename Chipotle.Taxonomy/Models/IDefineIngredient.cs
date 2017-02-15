@@ -5,6 +5,8 @@ using System.Text;
 
 namespace Chipotle.Taxonomy
 {
+
+  
     public interface IDefineIngredient
     {
         string Name { get; set; }
