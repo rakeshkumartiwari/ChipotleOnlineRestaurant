@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="DefinitionSeederTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SideDrinks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

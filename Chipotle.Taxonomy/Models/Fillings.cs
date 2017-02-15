@@ -5,13 +5,14 @@ using System.Text;
 
 namespace Chipotle.Taxonomy.Models
 {
-    public class Toppings : Definition
+    public class Fillings : Definition
     {
-        public Toppings(string name):base(name)
+        public Fillings(string name)
+            : base(name)
         {
-             
+
         }
-        public Toppings()
+        public Fillings()
         {
 
         }

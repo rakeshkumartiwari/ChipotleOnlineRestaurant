@@ -10,6 +10,6 @@ namespace Chipotle.Taxonomy.Infrastructure
 {
     public class TaxonomyDb : DbContext
     {
-        public IDbSet<Definition> Definitions { get; set; }
+        public DbSet<Definition> Definitions { get; set; }
     }
 }

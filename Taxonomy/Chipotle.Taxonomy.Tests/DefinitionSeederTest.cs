@@ -15,9 +15,9 @@ namespace Chipotle.Taxonomy.Tests
         public  Context()
         {
             var taxonomyDb = new TaxonomyDb();
-            var all = from c in taxonomyDb.Defini select c;
-            dataDb.Table.RemoveRange(all);
-            dataDb.SaveChanges();
+            var all = from c in taxonomyDb.Definitions select c;
+            taxonomyDb.Definitions.RemoveRange(all);
+            taxonomyDb.SaveChanges();
         }
     
     }
@@ -41,19 +41,49 @@ namespace Chipotle.Taxonomy.Tests
             db.Definitions.Add(topping);
             db.SaveChanges();
 
-            var savedTopping = db.Definitions.ToList();
-            Assert.Equal(1, savedTopping.Count);
+            var savedDefinitions = db.Definitions.ToList();
+            var savedTopping = savedDefinitions.Where(d => d.Name == "Toppings").First();
+            Assert.NotNull(savedTopping);
+            Assert.Equal("Toppings",savedTopping.Name);
+
         }
 
 
-        //[Fact]
+        [Fact]
 
-        public void ICanReadToppings()
+        public void ICanSeedFillings()
         {
-            var topping = new Toppings("Toppings");
+
+            var fillings = new Fillings("Fillings");
             var db = new TaxonomyDb();
-            db.Definitions.Add(topping);
+
+            db.Definitions.Add(fillings);
             db.SaveChanges();
+
+            var savedDefinitions = db.Definitions.ToList();
+            var filling = savedDefinitions.Where(d => d.Name == "Fillings").First();
+            Assert.NotNull(filling);
+            Assert.Equal("Fillings", filling.Name);
+
+        }
+
+
+        [Fact]
+
+        public void ICanSeedSideDrinks()
+        {
+
+            var sideDrinks = new SideDrinks("Side and Drinks");
+            var db = new TaxonomyDb();
+
+            db.Definitions.Add(sideDrinks);
+            db.SaveChanges();
+
+            var savedSideDrinks = db.Definitions.ToList();
+            var sideDrink = savedSideDrinks.Where(d => d.Name == "Side and Drinks").First();
+            Assert.NotNull(sideDrink);
+            Assert.Equal("Side and Drinks", sideDrink.Name);
+
         }
     }
 }
