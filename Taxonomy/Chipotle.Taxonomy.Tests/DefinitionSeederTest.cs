@@ -3,24 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Chipotle.Taxonomy.Infrastructure;
-using Xunit;
-using Chipotle.Taxonomy.Models;
 using System.Data.Entity;
+using Xunit;
+
+using Chipotle.Taxonomy.Models;
+using Chipotle.Taxonomy.Infrastructure;
+
 
 namespace Chipotle.Taxonomy.Tests
 {
-    public class Context {
-
-        public  Context()
-        {
-            var taxonomyDb = new TaxonomyDb();
-            var all = from c in taxonomyDb.Definitions select c;
-            taxonomyDb.Definitions.RemoveRange(all);
-            taxonomyDb.SaveChanges();
-        }
-    
-    }
+   
     public class DefinitionSeederTest : IClassFixture<Context>
     {
 
@@ -44,7 +36,7 @@ namespace Chipotle.Taxonomy.Tests
             var savedDefinitions = db.Definitions.ToList();
             var savedTopping = savedDefinitions.Where(d => d.Name == "Toppings").First();
             Assert.NotNull(savedTopping);
-            Assert.Equal("Toppings",savedTopping.Name);
+            Assert.Equal("Toppings", savedTopping.Name);
 
         }
 
