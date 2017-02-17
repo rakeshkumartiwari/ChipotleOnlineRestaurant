@@ -10,7 +10,7 @@ namespace Chipotle.Taxonomy.Models
         public int Id { get; set; }
 
         public string IngrdientId { get; set; }
-        public Definition Item { get; set; }
+        public Definition Definitions { get; set; }
 
        
 

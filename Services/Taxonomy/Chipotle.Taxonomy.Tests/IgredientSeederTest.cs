@@ -16,9 +16,9 @@ namespace Chipotle.Taxonomy.Tests
         public void ICanSeedIngredient()
         {
             var db = new TaxonomyDb();
-            db.Ingredients.Add(new Ingredient { IngrdientId = "1", Item = new Fillings { Name = "Fillings" } });
-            db.Ingredients.Add(new Ingredient { IngrdientId = "2", Item = new Toppings { Name = "Toppings" } });
-            db.Ingredients.Add(new Ingredient { IngrdientId = "3", Item = new SideDrinks { Name = "Side and Drinks" } });
+            db.Ingredients.Add(new Ingredient { IngrdientId = "1", Definitions = new Fillings { Id = 1} });
+            db.Ingredients.Add(new Ingredient { IngrdientId = "2", Definitions = new Toppings { Id = 2} });
+            db.Ingredients.Add(new Ingredient { IngrdientId = "3", Definitions = new SideDrinks { Id = 3} });
             
             db.SaveChanges();
         }
