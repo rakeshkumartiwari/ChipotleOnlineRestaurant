@@ -21,7 +21,7 @@ namespace Chipotle.Taxonomy.Tests
         {
             //after each test ends
             var taxonomyDb = new TaxonomyDb();
-            var all = from c in taxonomyDb.Definitions select c;
+            var all = from d in taxonomyDb.Definitions select d;
             taxonomyDb.Definitions.RemoveRange(all);
             taxonomyDb.SaveChanges();
         }

@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Context.cs" />
     <Compile Include="DefinitionSeederTest.cs" />
+    <Compile Include="IgredientSeederTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

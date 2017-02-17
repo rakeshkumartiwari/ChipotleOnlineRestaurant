@@ -11,5 +11,7 @@ namespace Chipotle.Taxonomy.Infrastructure
     public class TaxonomyDb : DbContext
     {
         public DbSet<Definition> Definitions { get; set; }
+        public DbSet<Ingredient> Ingredients { get; set; }
+        
     }
 }
