@@ -17,30 +17,35 @@ namespace Chipotle.Taxonomy
             db = new TaxonomyDb();
         }
 
-        public void SaveToppings(string name)
+        public void SaveToppings(string definitionId,string definitionName)
         {
-            var topping = new Toppings(name);
+            var topping = new Toppings(definitionId, definitionName);
 
             db.Definitions.Add(topping);
             db.SaveChanges();
         }
 
-        public void SeedFillings(string name)
+        public void SaveFillings(string definitionId, string definitionName)
         {
-            var topping = new Fillings(name);
+            var topping = new Fillings(definitionId, definitionName);
 
             db.Definitions.Add(topping);
             db.SaveChanges();
         }
 
-        public void SeedSideDrinks(string name)
+        public void SaveSideDrinks(string definitionId, string definitionName)
         {
-            var topping = new SideDrinks(name);
+            var topping = new SideDrinks(definitionId, definitionName);
 
             db.Definitions.Add(topping);
             db.SaveChanges();
         }
 
-        
+        public void SaveIngrdient(string ingerdientId, string definitionId)
+        {
+            var ingredient = new Ingredient(ingerdientId, definitionId);
+            db.Ingredients.Add(ingredient);
+            db.SaveChanges();
+        }
     }
 }

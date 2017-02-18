@@ -8,17 +8,19 @@ namespace Chipotle.Taxonomy.Models
 {
     public class Definition : IDefineIngredient
     {
-        public Definition(string name)
+        public int Id { get; set; }
+        public string DefinitionId { get; set; }
+        public string DefinitionName { get; set; }
+        
+        public Definition(string definitionId, string definitionName)
         {
-            if(string.IsNullOrWhiteSpace(name)) throw new Exception("Defintion needs name");
-            Name = name;
+            DefinitionId = definitionId;
+            DefinitionName = definitionName;
         }
         public Definition()
         {
 
         }
-        public int Id { get; set; }
-        public string Name { get; set; }
     }
 
 }

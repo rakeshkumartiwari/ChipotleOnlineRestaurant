@@ -7,8 +7,9 @@ namespace Chipotle.Taxonomy.Models
 {
     public class Fillings : Definition
     {
-        public Fillings(string name)
-            : base(name)
+
+        public Fillings(string definitionId, string definitionName)
+            : base(definitionId, definitionName)
         {
 
         }

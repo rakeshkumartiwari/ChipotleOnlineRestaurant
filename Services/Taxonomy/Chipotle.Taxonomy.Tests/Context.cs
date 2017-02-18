@@ -11,7 +11,7 @@ using Chipotle.Taxonomy.Infrastructure;
 
 
 
-namespace Chipotle.Taxonomy.Tests
+namespace Chipotle.Taxonomy.Models
 {
 
 

@@ -2,14 +2,14 @@
 public class SideDrinks : Definition
 {
 
-    public SideDrinks(string name)
-        : base(name)
+    public SideDrinks(string definitionId, string definitionName)
+        : base(definitionId, definitionName)
     {
 
     }
+
     public SideDrinks()
     {
 
     }
-
 }

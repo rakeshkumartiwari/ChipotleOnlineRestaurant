@@ -7,14 +7,18 @@ namespace Chipotle.Taxonomy.Models
 {
     public class Ingredient
     {
+
+        public Ingredient(string ingredientId, string definitionId)
+        {
+            this.IngredientId = ingredientId;
+            this.DefinitionId = definitionId;
+        }
         public int Id { get; set; }
+        public string IngredientId { get; set; }
+        public string DefinitionId { get; set; }
+        public Ingredient()
+        {
 
-        public string IngrdientId { get; set; }
-        public Definition Definitions { get; set; }
-
-       
-
+        }
     }
-
-
 }
