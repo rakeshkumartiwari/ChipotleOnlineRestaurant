@@ -72,6 +72,7 @@
     <Compile Include="Context.cs" />
     <Compile Include="DefinitionRepositoryTest.cs" />
     <Compile Include="IngredientRepositoryTest.cs" />
+    <Compile Include="MealRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Chipotle.Taxonomy.Models
 {
-    public class Ingredient
+    public class DefinitionType
     {
         public int Id { get; set; }
-        public string IngredientId { get; set; }
         public string DefinitionId { get; set; }
-        public Ingredient(string ingredientId, string definitionId)
+
+
+        public DefinitionType(string definitionId)
         {
-            this.IngredientId = ingredientId;
+            // TODO: Complete member initialization
             this.DefinitionId = definitionId;
         }
-      
-        public Ingredient()
+
+
+        public DefinitionType()
         {
 
         }

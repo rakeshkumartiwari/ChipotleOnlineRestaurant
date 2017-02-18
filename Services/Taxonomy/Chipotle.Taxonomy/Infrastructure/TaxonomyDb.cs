@@ -13,6 +13,8 @@ namespace Chipotle.Taxonomy.Infrastructure
     {
         public DbSet<Definition> Definitions { get; set; }
         public DbSet<Ingredient> Ingredients { get; set; }
+        public DbSet<Meal> Meals { get; set; }
+        public DbSet<DefinitionType> DefinitionTypes { get; set; }
         
     }
 }

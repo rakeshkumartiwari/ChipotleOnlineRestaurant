@@ -17,12 +17,16 @@ namespace Chipotle.Taxonomy.Models
         {
             var taxonomySeeder = new TaxonomyDataSeeder();
             taxonomySeeder.SaveIngrdient("1", "Fillings");
+            taxonomySeeder.SaveIngrdient("1", "Toppinsg");
+            taxonomySeeder.SaveIngrdient("1", "Sides and Driks");
 
             var db = new TaxonomyDb();
             var saveIngredient = db.Ingredients.ToList();
             var savedFillings = db.Ingredients.Where(f => f.DefinitionId == "Fillings").First();
             Assert.NotNull(savedFillings);
             Assert.Equal("Fillings", savedFillings.DefinitionId);
+
+            
         }
     }
 }

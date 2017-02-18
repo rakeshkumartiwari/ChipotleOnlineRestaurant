@@ -47,5 +47,13 @@ namespace Chipotle.Taxonomy
             db.Ingredients.Add(ingredient);
             db.SaveChanges();
         }
+
+        public void SaveMeal(string mealId, List<DefinitionType> definations)
+        {
+            var meal = new Meal(mealId, definations);
+            db.Meals.Add(meal);
+            db.SaveChanges();
+        }
+       
     }
 }
