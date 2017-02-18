@@ -64,7 +64,7 @@ namespace Chipotle.Taxonomy.Models
         public void ICanSeedSideDrinks()
         {
             var taxonomySeeder = new TaxonomyDataSeeder();
-            taxonomySeeder.SaveSideDrinks("1", "Side and Drinks");
+            taxonomySeeder.SaveSideDrinks("1", "Sides and Drinks");
 
 
             var db = new TaxonomyDb();
@@ -72,9 +72,9 @@ namespace Chipotle.Taxonomy.Models
 
 
             var savedSideDrinks = db.Definitions.ToList();
-            var sideDrink = savedSideDrinks.Where(d => d.DefinitionName == "Side and Drinks").First();
+            var sideDrink = savedSideDrinks.Where(d => d.DefinitionName == "Sides and Drinks").First();
             Assert.NotNull(sideDrink);
-            Assert.Equal("Side and Drinks", sideDrink.DefinitionName);
+            Assert.Equal("Sides and Drinks", sideDrink.DefinitionName);
 
         }
     }

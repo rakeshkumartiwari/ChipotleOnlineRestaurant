@@ -11,6 +11,10 @@ namespace Chipotle.Taxonomy.Infrastructure
 {
     public class TaxonomyDb : DbContext
     {
+        public TaxonomyDb():base("Chipotle.Taxonomy")
+        {
+            Database.SetInitializer<TaxonomyDb>(new DropCreateDatabaseAlways<TaxonomyDb>());
+        }
         public DbSet<Definition> Definitions { get; set; }
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<Meal> Meals { get; set; }
