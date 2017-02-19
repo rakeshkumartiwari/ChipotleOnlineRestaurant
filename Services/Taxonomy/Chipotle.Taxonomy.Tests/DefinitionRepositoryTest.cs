@@ -13,15 +13,8 @@ using Chipotle.Taxonomy.Infrastructure;
 namespace Chipotle.Taxonomy.Models
 {
 
-    public class DefinitionRepositoryTest //: IClassFixture<Context>
+    public class DefinitionRepositoryTest
     {
-
-        //Context _context;
-        //public DefinitionRepositoryTest(Context context)
-        //{
-        //    _context = context;
-        //}
-
         [Fact]
 
         public void ICanSeedToppings()

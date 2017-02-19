@@ -7,6 +7,7 @@ using Xunit;
 
 using Chipotle.Taxonomy.Infrastructure;
 using Chipotle.Taxonomy.Models;
+using System.Data.Entity;
 
 namespace Chipotle.Taxonomy.Tests
 {
@@ -20,13 +21,18 @@ namespace Chipotle.Taxonomy.Tests
                 new List<DefinitionType> {
               new DefinitionType { DefinitionId = "Fillings" },
                new DefinitionType{ DefinitionId = "Toppings"},
-               new DefinitionType{ DefinitionId = "Sedes and Drinks"} 
+               new DefinitionType{ DefinitionId = "Sides and Drinks"} 
            });
 
 
             var db = new TaxonomyDb();
-            var savedMeal = db.Meals.ToString();
+            var savedMeal = ((IDbSet<Meal>)(db.Meals)).Include(m=>m.Definitions).Single(f => f.MealId == "BARRITO");
             Assert.NotNull(savedMeal);
+            Assert.NotNull(savedMeal.Definitions);
+            Assert.Equal(3, savedMeal.Definitions.Count);
+            Assert.Equal(1, savedMeal.Definitions.Count(f => f.DefinitionId == "Fillings"));
+            Assert.Equal(1, savedMeal.Definitions.Count(f => f.DefinitionId == "Toppings"));
+            Assert.Equal(1, savedMeal.Definitions.Count(f => f.DefinitionId == "Sides and Drinks"));
         }
 
 
