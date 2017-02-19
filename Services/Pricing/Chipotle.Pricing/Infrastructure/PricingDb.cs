@@ -15,5 +15,7 @@ namespace Chipotle.Pricing.Infrastructure
             Database.SetInitializer<PricingDb>(new DropCreateDatabaseAlways<PricingDb>());
         }
         public IDbSet<ItemPrice> ItemPrices { get; set; }
+       public IDbSet<Bill> Bills { get; set; }
+       public IDbSet<LineItem> LineItems { get; set; }
     }
 }

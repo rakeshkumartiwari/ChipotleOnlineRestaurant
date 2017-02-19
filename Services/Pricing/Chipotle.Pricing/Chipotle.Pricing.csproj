@@ -90,9 +90,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\BillRepository.cs" />
     <Compile Include="Infrastructure\ItemPriceRepository.cs" />
     <Compile Include="Infrastructure\PricingDb.cs" />
+    <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\ItemPrice.cs" />
+    <Compile Include="Models\LineItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
