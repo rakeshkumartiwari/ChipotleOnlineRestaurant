@@ -14,7 +14,7 @@ namespace Chipotle.Taxonomy.Tests
     public class MealRepositoryTest
     {
         [Fact]
-        public void ICanSeedMeal()
+        public void CanSeedMeal()
         {
             var mealDataSeeder = new MealRepository();
             mealDataSeeder.SaveMeal("BARRITO",
