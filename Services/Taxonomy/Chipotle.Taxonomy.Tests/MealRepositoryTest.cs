@@ -26,7 +26,7 @@ namespace Chipotle.Taxonomy.Tests
 
 
             var db = new TaxonomyDb();
-            var savedMeal = ((IDbSet<Meal>)(db.Meals)).Include(m=>m.Definitions).Single(f => f.MealId == "BARRITO");
+            var savedMeal = db.Meals.Include(m=>m.Definitions).Single(f => f.MealId == "BARRITO");
             Assert.NotNull(savedMeal);
             Assert.NotNull(savedMeal.Definitions);
             Assert.Equal(3, savedMeal.Definitions.Count);

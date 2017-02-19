@@ -15,10 +15,10 @@ namespace Chipotle.Taxonomy.Infrastructure
         {
             Database.SetInitializer<TaxonomyDb>(new DropCreateDatabaseAlways<TaxonomyDb>());
         }
-        public DbSet<Definition> Definitions { get; set; }
-        public DbSet<Ingredient> Ingredients { get; set; }
-        public DbSet<Meal> Meals { get; set; }
-        public DbSet<DefinitionType> DefinitionTypes { get; set; }
+        public IDbSet<Definition> Definitions { get; set; }
+        public IDbSet<Ingredient> Ingredients { get; set; }
+        public IDbSet<Meal> Meals { get; set; }
+        public IDbSet<DefinitionType> DefinitionTypes { get; set; }
         
     }
 }

@@ -34,7 +34,7 @@ namespace Chipotle.Taxonomy.Models
 
         [Fact]
 
-        public void ICanSeedFillings()
+        public void CanSeedFillings()
         {
             var definitionDataSeeder = new DefinitionRepository();
             definitionDataSeeder.SaveFillings("1", "Fillings");
@@ -45,7 +45,7 @@ namespace Chipotle.Taxonomy.Models
 
 
             var savedDefinitions = db.Definitions.ToList();
-            var filling = savedDefinitions.Where(d => d.DefinitionName == "Fillings").First();
+            var filling = savedDefinitions.First(d => d.DefinitionName == "Fillings");
             Assert.NotNull(filling);
             Assert.Equal("Fillings", filling.DefinitionName);
 
@@ -54,7 +54,7 @@ namespace Chipotle.Taxonomy.Models
 
         [Fact]
 
-        public void ICanSeedSideDrinks()
+        public void CanSeedSideDrinks()
         {
             var definitionDataSeeder = new DefinitionRepository();
             definitionDataSeeder.SaveSideDrinks("1", "Sides and Drinks");
@@ -65,7 +65,7 @@ namespace Chipotle.Taxonomy.Models
 
 
             var savedSideDrinks = db.Definitions.ToList();
-            var sideDrink = savedSideDrinks.Where(d => d.DefinitionName == "Sides and Drinks").First();
+            var sideDrink = savedSideDrinks.First(d => d.DefinitionName == "Sides and Drinks");
             Assert.NotNull(sideDrink);
             Assert.Equal("Sides and Drinks", sideDrink.DefinitionName);
 
