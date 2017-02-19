@@ -26,8 +26,8 @@ namespace Chipotle.Taxonomy.Models
 
         public void ICanSeedToppings()
         {
-            var taxonomySeeder = new TaxonomyDataSeeder();
-            taxonomySeeder.SaveToppings("1", "Toppings");
+            var definitionDataSeeder = new DefinitionRepository();
+            definitionDataSeeder.SaveToppings("1", "Toppings");
 
 
             var db = new TaxonomyDb();
@@ -43,8 +43,8 @@ namespace Chipotle.Taxonomy.Models
 
         public void ICanSeedFillings()
         {
-            var taxonomySeeder = new TaxonomyDataSeeder();
-            taxonomySeeder.SaveFillings("1", "Fillings");
+            var definitionDataSeeder = new DefinitionRepository();
+            definitionDataSeeder.SaveFillings("1", "Fillings");
 
 
             var db = new TaxonomyDb();
@@ -63,8 +63,8 @@ namespace Chipotle.Taxonomy.Models
 
         public void ICanSeedSideDrinks()
         {
-            var taxonomySeeder = new TaxonomyDataSeeder();
-            taxonomySeeder.SaveSideDrinks("1", "Sides and Drinks");
+            var definitionDataSeeder = new DefinitionRepository();
+            definitionDataSeeder.SaveSideDrinks("1", "Sides and Drinks");
 
 
             var db = new TaxonomyDb();

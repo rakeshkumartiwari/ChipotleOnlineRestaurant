@@ -91,6 +91,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\DefinitionRepository.cs" />
+    <Compile Include="Infrastructure\IngredientRepository.cs" />
+    <Compile Include="Infrastructure\MealRepository.cs" />
     <Compile Include="Infrastructure\TaxonomyDb.cs" />
     <Compile Include="Models\Definition.cs" />
     <Compile Include="Models\DefinitionType.cs" />

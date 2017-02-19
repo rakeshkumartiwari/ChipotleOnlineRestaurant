@@ -15,14 +15,14 @@ namespace Chipotle.Taxonomy.Tests
         [Fact]
         public void ICanSeedMeal()
         {
-            var taxonomySeeder = new TaxonomyDataSeeder();
-            taxonomySeeder.SaveMeal("1",
+            var mealDataSeeder = new MealRepository();
+            mealDataSeeder.SaveMeal("BARRITO",
                 new List<DefinitionType> {
               new DefinitionType { DefinitionId = "Fillings" },
                new DefinitionType{ DefinitionId = "Toppings"},
                new DefinitionType{ DefinitionId = "Sedes and Drinks"} 
            });
-             
+
 
             var db = new TaxonomyDb();
             var savedMeal = db.Meals.ToString();

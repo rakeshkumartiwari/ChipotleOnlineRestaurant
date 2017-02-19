@@ -15,10 +15,10 @@ namespace Chipotle.Taxonomy.Models
         [Fact]
         public void ICanSeedIngredient()
         {
-            var taxonomySeeder = new TaxonomyDataSeeder();
-            taxonomySeeder.SaveIngrdient("1", "Fillings");
-            taxonomySeeder.SaveIngrdient("1", "Toppinsg");
-            taxonomySeeder.SaveIngrdient("1", "Sides and Driks");
+            var ingredientDataSeeder = new IngredientRepository();
+            ingredientDataSeeder.SaveIngrdient("1", "Fillings");
+            ingredientDataSeeder.SaveIngrdient("1", "Toppinsg");
+            ingredientDataSeeder.SaveIngrdient("1", "Sides and Driks");
 
             var db = new TaxonomyDb();
             var saveIngredient = db.Ingredients.ToList();
