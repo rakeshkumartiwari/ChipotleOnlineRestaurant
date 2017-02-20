@@ -13,7 +13,7 @@ namespace Chipotle.Pricing.Test
    public class BillRepositoryTest
     {
        [Fact]
-       public void CanSeedBill()
+       public void CanSaveBill()
        {
            var billDataSeeder = new BillRepository();
 
@@ -25,9 +25,9 @@ namespace Chipotle.Pricing.Test
            });
 
 
-           var db = new PricingDb();
-           var billSaved = db.Bills.Include(l => l.LineItems).Single(b => b.BillId == "1");
-           Assert.NotNull(billSaved);
+           
+           var savedBill = billDataSeeder.GetBill("1");
+           Assert.NotNull(savedBill);
        }
     }
 }

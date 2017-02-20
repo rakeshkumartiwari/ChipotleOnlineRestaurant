@@ -23,5 +23,11 @@ namespace Chipotle.Pricing.Infrastructure
             db.ItemPrices.Add(itemPrice);
             db.SaveChanges();
         }
+
+      public List<ItemPrice> GetItemPrice()
+      {
+         List<ItemPrice> itemPricesList = db.ItemPrices.ToList();
+         return itemPricesList;
+      }
     }
 }
