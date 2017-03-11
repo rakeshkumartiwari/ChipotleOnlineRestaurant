@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Chipotle.Taxonomy.Models
 {
@@ -13,9 +10,9 @@ namespace Chipotle.Taxonomy.Models
 
         public Meal(string mealId, List<DefinitionType> definations)
         {
-            // TODO: Complete member initialization
-            this.MealId = mealId;
-            this.Definitions = definations;
+            
+            MealId = mealId;
+            Definitions = definations;
         }
         
 

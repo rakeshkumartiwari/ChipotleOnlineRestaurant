@@ -69,9 +69,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillRepositoryTest.cs" />
+    <Compile Include="OrderRepositoryTest.cs" />
     <Compile Include="ItemPriceRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaxDirecctoryRepositotyTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

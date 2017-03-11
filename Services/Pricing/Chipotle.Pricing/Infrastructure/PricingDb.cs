@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using Chipotle.Pricing.Models;
 
 namespace Chipotle.Pricing.Infrastructure
@@ -15,7 +10,8 @@ namespace Chipotle.Pricing.Infrastructure
             Database.SetInitializer<PricingDb>(new DropCreateDatabaseAlways<PricingDb>());
         }
         public IDbSet<ItemPrice> ItemPrices { get; set; }
-       public IDbSet<Bill> Bills { get; set; }
+       public IDbSet<Order> Orders { get; set; }
        public IDbSet<LineItem> LineItems { get; set; }
+       public IDbSet<TaxDirectory> TaxDirectories { get; set; }
     }
 }

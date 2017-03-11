@@ -91,12 +91,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\BillRepository.cs" />
+    <Compile Include="Infrastructure\OrderRepository.cs" />
     <Compile Include="Infrastructure\ItemPriceRepository.cs" />
     <Compile Include="Infrastructure\PricingDb.cs" />
-    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Infrastructure\TaxDirectoryRepository.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\ItemPrice.cs" />
     <Compile Include="Models\LineItem.cs" />
+    <Compile Include="Models\TaxDirectory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -109,7 +111,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Start\App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

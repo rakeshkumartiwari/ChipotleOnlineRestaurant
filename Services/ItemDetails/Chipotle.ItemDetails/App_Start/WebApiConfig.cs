@@ -1,6 +1,9 @@
-﻿using System.Web.Http;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
 
-namespace Chipotle.Pricing
+namespace Chipotle.ItemDetails
 {
     public static class WebApiConfig
     {
@@ -13,8 +16,8 @@ namespace Chipotle.Pricing
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional}
+                routeTemplate: "api/Item/{id}",
+                defaults: new { id = RouteParameter.Optional ,Controller = "Item"}
             );
         }
     }

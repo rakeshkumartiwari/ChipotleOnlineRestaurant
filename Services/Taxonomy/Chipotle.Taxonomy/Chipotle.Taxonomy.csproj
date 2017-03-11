@@ -93,6 +93,7 @@
     </Compile>
     <Compile Include="Infrastructure\DefinitionRepository.cs" />
     <Compile Include="Infrastructure\IngredientRepository.cs" />
+    <Compile Include="Infrastructure\ItemRepository.cs" />
     <Compile Include="Infrastructure\MealRepository.cs" />
     <Compile Include="Infrastructure\TaxonomyDb.cs" />
     <Compile Include="Models\Definition.cs" />
@@ -100,6 +101,8 @@
     <Compile Include="Models\Fillings.cs" />
     <Compile Include="Models\IDefineIngredient.cs" />
     <Compile Include="Models\Ingredient.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemType.cs" />
     <Compile Include="Models\Meal.cs" />
     <Compile Include="Models\SideDrinks.cs" />
     <Compile Include="Models\Toppings.cs" />

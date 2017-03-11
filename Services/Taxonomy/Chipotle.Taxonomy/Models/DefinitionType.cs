@@ -14,8 +14,8 @@ namespace Chipotle.Taxonomy.Models
 
         public DefinitionType(string definitionId)
         {
-            // TODO: Complete member initialization
-            this.DefinitionId = definitionId;
+            
+            DefinitionId = definitionId;
         }
 
 

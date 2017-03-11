@@ -19,6 +19,6 @@ namespace Chipotle.Taxonomy.Infrastructure
         public IDbSet<Ingredient> Ingredients { get; set; }
         public IDbSet<Meal> Meals { get; set; }
         public IDbSet<DefinitionType> DefinitionTypes { get; set; }
-        
+        public IDbSet<Item> Items { get; set; }
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Chipotle.Taxonomy.Models
+﻿namespace Chipotle.Taxonomy.Models
 {
     public class Ingredient
     {
@@ -12,8 +7,8 @@ namespace Chipotle.Taxonomy.Models
         public string DefinitionId { get; set; }
         public Ingredient(string ingredientId, string definitionId)
         {
-            this.IngredientId = ingredientId;
-            this.DefinitionId = definitionId;
+            IngredientId = ingredientId;
+            DefinitionId = definitionId;
         }
       
         public Ingredient()
