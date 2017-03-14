@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICreateOrderTests.cs" />
     <Compile Include="OrderInMemoryRepository.cs" />
     <Compile Include="OrderRepositoryTest.cs" />
     <Compile Include="ItemPriceRepositoryTest.cs" />
