@@ -94,9 +94,11 @@
     <Compile Include="Infrastructure\IOrderRepository.cs" />
     <Compile Include="Infrastructure\IPricingDb.cs" />
     <Compile Include="Infrastructure\ITaxDirectoryRepository.cs" />
+    <Compile Include="Infrastructure\OrderInMemoryRepository.cs" />
     <Compile Include="Infrastructure\OrderRepository.cs" />
     <Compile Include="Infrastructure\ItemPriceRepository.cs" />
     <Compile Include="Infrastructure\PricingDb.cs" />
+    <Compile Include="Infrastructure\TaxDirectoryInMemoryRepository.cs" />
     <Compile Include="Infrastructure\TaxDirectoryRepository.cs" />
     <Compile Include="Models\CalculateSubTotal.cs" />
     <Compile Include="Models\OrderTotalCalculator.cs" />
